@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <h1>The Flexbox's plagiary with Javascript</h1>
+        <h2>Made October. 21 2017 0:00</h2>
+        <div class="overall">
+            <div class="overall_element" id="overall_1">
+            <h4>.flex-container {</h4>
+            <p class="css_attr" id="flex"></p>
+            <p class="css_attr" id="inline_flex"></p>
+            <p class="css_attr" id="column"></p>
+            <p class="css_attr" id="column_reverse"></p>
+            <p class="css_attr" id="_row"></p>
+            <p class="css_attr" id="row_reverse"></p>
+            <p class="css_attr" id="justify_flex_start"></p>
+            <p class="css_attr" id="justify_flex_end"></p>
+            <p class="css_attr" id="justify_center"></p>
+            <p class="css_attr" id="space-between"></p>
+            <p class="css_attr" id="space-around"></p>
+            <p class="css_attr" id="align_flex_start"></p>
+            <p class="css_attr" id="align_flex_end"></p>
+            <p class="css_attr" id="align_center"></p>
+            <p class="css_attr" id="align_baseline"></p>
+            <p class="css_attr" id="align_stretch"></p>
+            <h4>&ensp;&ensp;}</h4>
+            </div>
+            <div class="overall_element" id="overall_element_2">
+                <div class="flex-container">
+                    <div class="flex-element" id="element_1"><p>1</p></div>
+			        <div class="flex-element" id="element_2"><p>2</p></div>
+			        <div class="flex-element" id="element_3"><p>3</p></div>
+			        <div class="flex-element" id="element_4"><p>4</p></div>
+			        <div class="flex-element" id="element_5"><p>5</p></div>
+                </div>
+            </div>        
+            <div class="overall_element">
+             <h4>.flex-elements {</h4>
+             <p class="css_attr" id="flex_grow_0"></p>
+             <p class="css_attr" id="flex_grow_1"></p>
+             <p class="css_attr" id="flex_grow_2"></p>
+             <h4> &ensp;&ensp;}</h4> 
+              <h4>.element_3 {</h4> 
+             <p class="css_attr" id="flex-basis_0"></p>  
+             <p class="css_attr" id="flex-basis_60px"></p>
+             <p class="css_attr" id="flex-basis_70px"></p>
+             <p class="css_attr" id="flex_grow_3"></p>
+             <p class="css_attr" id="flex_grow_4"></p>
+             <p class="css_attr" id="flex_grow_5"></p>
+             <p class="css_attr" id="flex_grow_6"></p>
+             <p class="css_attr" id="flex_shrink_0"></p>
+             <p class="css_attr" id="flex_shrink_1"></p>
+             <p class="css_attr" id="flex_shrink_2"></p>
+             <p class="css_attr" id="flex_shrink_3"></p>
+             <p class="css_attr" id="flex_shrink_4"></p>
+             <p class="css_attr" id="flex_shrink_5"></p>
+             <h4> &ensp;&ensp;}</h4> 
+            </div>
+        </div>
+        <div class="overall">
+        <section>
+           <h4>FLEX-CONTAINER</h4>
+            <div class="section_container">
+            <div>
+    <p><button type="button" id="btn_1" onclick="addattr('display','flex','flex','#btn_1')">display : flex;</button></p>
+    <p><button type="button" id="btn_2" onclick="addattr('display','inline-flex','inline_flex','#btn_2')">display : inline-flex;</button></p>
+    <p><button type="button" id="btn_3" onclick="addattr('flex-direction','column','column','#btn_3')">flex-direction  : column;</button></p>
+    <p><button type="button" id="btn_4" onclick="addattr('flex-direction','column-reverse','column_reverse','#btn_4')">flex-direction  : column-revers;</button></p>
+    <p><button type="button" id="btn_5" onclick="addattr('flex-direction','row','_row','#btn_5')">flex-direction  : row;</button></p>
+    <p><button type="button" id="btn_6" onclick="addattr('flex-direction','row-reverse','row_reverse','#btn_6')">flex-direction  : row-reverse;</button></p>
+    <p><button type="button" id="btn_7" onclick="addattr('justify-content','flex-start','justify_flex_start','#btn_7')">justify-content : flex-start;</button></p>
+    <p><button type="button" id="btn_8" onclick="addattr('justify-content','flex-end','justify_flex_end','#btn_8')">justify-content : flex-end;</button></p>
+            </div>
+            <div>
+    <p><button type="button" id="btn_9"  onclick="addattr('justify-content','center','justify_center','#btn_9')">justify-content : center;</button></p>
+    <p><button type="button" id="btn_10" onclick="addattr('justify-content','space-between','space-between','#btn_10')">justify-content : space-between;</button></p>
+    <p><button type="button" id="btn_11" onclick="addattr('justify-content','space-around','space-around','#btn_11')">justify-content : space-around;</button></p>
+    <p><button type="button" id="btn_12" onclick="addattr('align-items','flex-start','align_flex_start','#btn_12')">align-items : flex-start;</button></p>
+    <p><button type="button" id="btn_13" onclick="addattr('align-items','flex-end','align_flex_end','#btn_13')">align-items : flex-end;</button></p>
+    <p><button type="button" id="btn_14" onclick="addattr('align-items','center','align_center','#btn_14')">align-items : center;</button></p>
+    <p><button type="button" id="btn_15" onclick="addattr('align-items','baseline','align_baseline','#btn_15')">align-items : baseline;</button></p>
+    <p><button type="button" id="btn_16" onclick="addattr('align-items','stretch','align_stretch','#btn_16')">align-items : stretch;</button></p>
+            </div>
+            </div>   
+        </section>
+        <section>
+           <h4>FLEX-ELEMENT</h4>
+            <div class="section_container">
+            <div>
+                <p><button type="button" id="btn_20" onclick="addattr_el('flex-grow','0','flex_grow_0','#btn_20')">flex-grow  : 0; (elements)</button></p>
+                <p><button type="button" id="btn_21" onclick="addattr_el('flex-grow','1','flex_grow_1','#btn_21')">flex-grow  : 1; (elements)</button></p>
+                <p><button type="button" id="btn_22" onclick="addattr_el('flex-grow','2','flex_grow_2','#btn_22')">flex-grow  : 2; (elements)</button></p>
+                <p><button type="button" id="btn_23" onclick="addattr_single('flex-grow','3','flex_grow_3','#btn_23')">flex-grow  : 3; (element_3)</button></p>
+                <p><button type="button" id="btn_24" onclick="addattr_single('flex-grow','4','flex_grow_4','#btn_24')">flex-grow  : 4; (element_3)</button></p>
+                <p><button type="button" id="btn_17" onclick="addattr_single('flex-basis','0','flex-basis_0','#btn_17')">flex-basis : 0;&ensp;&ensp; &ensp;(element_3)</button></p>
+                <p><button type="button" id="btn_18" onclick="addattr_single('flex-basis','60px','flex-basis_60px','#btn_18')">flex-basis : 60px; (element_3)</button></p>
+                <p><button type="button" id="btn_19" onclick="addattr_single('flex-basis','70px','flex-basis_70px','#btn_19')">flex-basis : 30px; (element_3)</button></p>
+            </div>
+            <div>
+                <p><button type="button" id="btn_25" onclick="addattr_single('flex-grow','5','flex_grow_5','#btn_25')">flex-grow : 5; (element_3)</button></p>
+                <p><button type="button" id="btn_26" onclick="addattr_single('flex-grow','6','flex_grow_6','#btn_26')">flex-grow : 6; (element_3)</button></p>
+                <p><button type="button" id="btn_27" onclick="addattr_single('flex-shrink','0','flex_shrink_0','#btn_27')"> flex-shrink: : 0; (element_3)</button></p>
+                <p><button type="button" id="btn_28" onclick="addattr_single('flex-shrink','1','flex_shrink_1','#btn_28')">flex-shrink: : 1; (element_3)</button></p>
+                <p><button type="button" id="btn_29" onclick="addattr_single('flex-shrink','2','flex_shrink_2','#btn_29')">flex-shrink: : 2; (element_3)</button></p>
+                <p><button type="button" id="btn_30" onclick="addattr_single('flex-shrink','3','flex_shrink_3','#btn_30')">flex-shrink: : 3; (element_3)</button></p>
+                <p><button type="button" id="btn_31" onclick="addattr_single('flex-shrink','4','flex_shrink_4','#btn_31')">flex-shrink: : 4; (element_3)</button></p>
+                <p><button type="button" id="btn_32" onclick="addattr_single('flex-shrink','5','flex_shrink_5','#btn_32')">flex-shrink: : 5; (element_3)</button></p>
+            </div>
+            </div>
+        </section>
+    </div>
+        <p class="use">I use: HTML5, CSS3, botstrap3, flexbox, font-awesome, javascript, jquery</p>
+           <div class="container">
+           <div class="row">
+               <div class="col-xs-3"></div>
+               <div class="col-xs-3">
+                Скрипт продуцирует css свойства в соответствующий  css селектор, затирая предыдущие
+                значения новыми. При возникновении конфликта свойств перезагрузите страницу.
+
+               </div>
+               <div class="col-xs-3">
+                Отключить используемое свойство можно повторным кликом по кнопке.
+               </div>
+               <div class="col-xs-3"></div>
+           </div>
+       </div>
+        <footer class="proba">
+        <a href=" https://github.com/moroz-igor/contant_slider.git">
+            <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+        </a>
+        <p>https://github.com/moroz-igor/contant_slider.git</p>
+    </footer>
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+        <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+  </body>
+</html>
